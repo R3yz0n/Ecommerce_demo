@@ -5,7 +5,9 @@ import SingleProduct from './SingleProduct';
 
 const Home = () => {
 
-    const { state: { products } } = CartState();
+    const { state: { products, cart } } = CartState();
+
+
     return (
         <main className='w-full min-h-screen flex p-2 '>
             <Filters />
