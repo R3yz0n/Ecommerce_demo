@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Cart from './components/cart/Cart'
 import Dashboard from './components/dashboard/Dashboard'
@@ -7,13 +7,21 @@ import Home from './components/home/Home'
 
 const App = () => {
   console.disableYellowBox = true
+  const { pathname } = useLocation()
+  const [nav, setNav] = useState(false)
+  const toggleMenu = () => setNav(!nav)
+
+
+
+
+
   return (
     <>
-      <Header />
+      {(pathname === '/dashboard') ? null : <Header toggleMenu={toggleMenu} />}
       <Routes>
 
+        <Route path='/' element={<Home nav={nav} />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/' element={<Home />} />
 
 
         <Route path='/dashboard' element={<Dashboard />} />
