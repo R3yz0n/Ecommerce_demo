@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      {(pathname === '/dashboard') ? null : <Header toggleMenu={toggleMenu} />}
+      {(pathname === '/dashboard') ? null : <Header toggleMenu={toggleMenu} nav={nav} />}
       <Routes>
 
         <Route path='/' element={<Home nav={nav} />} />

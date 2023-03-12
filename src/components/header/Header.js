@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { CartState } from '../../store/Context'
 import Dropdown from './Dropdown'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { ImCross } from 'react-icons/im'
 
-const Header = ({ toggleMenu }) => {
+const Header = ({ toggleMenu, nav }) => {
     const { state: { cart }, prodDispatch } = CartState()
     const searchHandler = (e) => {
         prodDispatch({ type: 'SEARCH_QUERY', payload: e.target.value })
@@ -16,7 +17,11 @@ const Header = ({ toggleMenu }) => {
 
             <main className='w-[1024px] m-auto flex text-white items-center justify-between h-full '>
                 <aside className=' px-1 sm:px-3'>
-                    <GiHamburgerMenu className='md:hidden text-3xl' onClick={toggleMenu} />
+                    {
+                        !nav ? <GiHamburgerMenu className='md:hidden text-3xl' onClick={toggleMenu} /> :
+                            <ImCross className='md:hidden text-2xl' onClick={toggleMenu} />
+
+                    }
                 </aside>
 
 
