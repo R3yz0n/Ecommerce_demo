@@ -11,7 +11,9 @@ const Filters = ({ nav }) => {
 
 
     return (
-        <section className={` absolute top-[1px] left-0 md:block md:static md:w-64 px-4 py-6 bg-gray-700 text-white h-[85vh] z-50 duration-500 ${nav ? 'ml-0' : 'md:ml-0 ml-[-90%]'}`}>
+        <section className={` absolute top-[1px] left-0 md:block md:static md:w-64 px-4 py-6 bg-gray-700 text-white h-[85vh] z-50  ${nav ? 'ml-0' : 'md:ml-0 ml-[-90%]'}`}>
+
+
 
             <h1 className='text-2xl md:text-2xl font-sans font-semibold pb-3'>Filter Products</h1>
             <div>
