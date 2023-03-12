@@ -3,6 +3,7 @@ import { CartState } from '../../store/Context'
 import Dropdown from './Dropdown'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { ImCross } from 'react-icons/im'
+import { Link } from 'react-router-dom'
 
 const Header = ({ toggleMenu, nav }) => {
     const { state: { cart }, prodDispatch } = CartState()
@@ -25,7 +26,7 @@ const Header = ({ toggleMenu, nav }) => {
                 </aside>
 
 
-                <section className='text-lg tracking-wide font-sans font-semibold sm:text-2xl'>Shopping Cart</section>
+                <Link to='/dashboard' className='text-lg tracking-wide font-sans font-semibold sm:text-2xl'>Shopping Cart</Link>
                 <input type="search" placeholder='Search a product' className='rounded-md hidden sm:block  sm:px-6 sm:py-[10px] h-2/3 text-black w-[30%]  sm:w-[50%] font-semibold' onChange={searchHandler} />
                 <Dropdown cart={cart} />
             </main>
