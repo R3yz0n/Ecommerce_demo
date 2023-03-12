@@ -18,7 +18,7 @@ const Header = ({ toggleMenu, nav }) => {
             <main className='w-[1024px] m-auto flex text-white items-center justify-between h-full '>
                 <aside className=' px-1 sm:px-3'>
                     {
-                        !nav ? <GiHamburgerMenu className='md:hidden text-3xl' onClick={toggleMenu} /> :
+                        !nav ? <GiHamburgerMenu className='md:hidden text-3xl ' onClick={toggleMenu} /> :
                             <ImCross className='md:hidden text-2xl' onClick={toggleMenu} />
 
                     }
