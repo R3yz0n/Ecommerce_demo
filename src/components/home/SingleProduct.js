@@ -7,10 +7,11 @@ import Cart from '../cart/Cart';
 
 const SingleProduct = ({ prod }) => {
     // console.log(prod);
+    console.log('hi');
     const { state: { cart }, dispatch } = CartState();
 
     return (
-        <main className=' text-black py-4 card1  shadow-lg border-[1px] border-[#dfdcdc] h-fit'>
+        <main className=' text-black py-4 card1  shadow-lg border-[1px] border-[#dfdcdc] h-fit mb-5'>
 
             <section className='overflow-hidden w-full px-2'>
 

@@ -12,7 +12,7 @@ const Header = ({ toggleMenu }) => {
 
 
     return (
-        <nav className=' bg-gray-900 w-full h-auto flex px-6 py-4'>
+        <nav className=' bg-gray-800 w-full max-h-[10vh] flex px-6 py-4'>
 
             <main className='w-[1024px] m-auto flex text-white items-center justify-between h-full '>
                 <aside className=' px-1 sm:px-3'>

@@ -23,6 +23,7 @@ const GetProducts = async (setProducts, dispatch) => {
             arr.push(datas[i])
 
         }
+        // arr = arr.slice(0, 4)
 
         shuffleArray(arr)
 

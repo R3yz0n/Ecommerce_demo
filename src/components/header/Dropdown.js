@@ -25,28 +25,28 @@ const Dropdown = ({ cart }) => {
                 <BsTriangleFill style={{ rotate: '180deg' }} className='text-xs md:text-base' />
             </button>
 
-            <section className={`${toggle ? 'left-[-355%] lg:left-[-350%] min-w-[19rem] max-w-[24rem] py-2  absolute  bg-gray-200 mt-1   h-auto rounded-sm   duration-200  ease-linear z-50 ' : 'overflow-hidden w-0 h-0 '}`}>
+            <section className={`${toggle ? 'left-[-355%] lg:left-[-395%] min-w-[20rem] max-w-[24rem] py-2  absolute  bg-gray-200 mt-1 card1   h-auto rounded-sm   duration-200  ease-linear z-50 ' : 'overflow-hidden w-0 h-0 '}`}>
                 {
                     cart.length === 0 ? <p className='text-black font-semibold px-6 '>Cart is empty</p> :
                         <>
                             {
                                 cart.map((prod) =>
 
-                                    <div className='flex w-full text-black font-semibold p-2' key={prod.id}>
+                                    <div className='flex w-full text-black p-2' key={prod.id}>
                                         <aside className='w-1/4 flex'>
                                             <img src={prod.image} alt="ERROR" className='w-10 h-10 object-cover rounded-full  m-auto cursor-pointer ' />
 
 
                                         </aside>
                                         <aside className='text-[14px] w-3/4 px-2'>
-                                            <p>{prod.productName}</p>
-                                            <p>${prod.price}</p>
+                                            <p className='sm:font-semibold '>{prod.productName}</p>
+                                            <p>${prod.price}.00</p>
 
 
                                         </aside>
 
                                         <aside className=' flex pr-1 cursor-pointer' onClick={() => { dispatch({ type: 'REMOVE_FROM_CART', payload: prod }) }}>
-                                            {<AiFillDelete size={20} style={{ margin: 'auto' }}
+                                            {<AiFillDelete className='text-base sm:text-xl' style={{ margin: 'auto' }}
                                                 onMouseOver={({ target }) => target.style.color = "red"}
                                                 onMouseOut={({ target }) => target.style.color = "black"}
                                             />}

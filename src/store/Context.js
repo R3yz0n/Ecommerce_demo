@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer, useContext } from 'react'
+import React, { useState, useEffect, useReducer, useContext, useMemo } from 'react'
 import GetProducts from './GetProducts';
 import { cartReducer, prodReducer } from './Reducer';
 
@@ -24,9 +24,14 @@ const Context = ({ children }) => {
 
 
     return (
-        <Cart.Provider value={{ state, dispatch, prodState, prodDispatch }}>
+        <Cart.Provider value={useMemo(() => ({ state, dispatch, prodState, prodDispatch }), [state, prodState, dispatch, prodDispatch])}>
             {children}
         </Cart.Provider>
+        // <Cart.Provider value={{ state, dispatch, prodState, prodDispatch }}>
+        //     {children}
+        // </Cart.Provider>
+
+
     )
 }
 export default Context;
