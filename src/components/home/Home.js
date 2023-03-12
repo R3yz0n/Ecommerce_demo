@@ -37,7 +37,7 @@ const Home = ({ nav }) => {
 
     }
     return (
-        <main className='w-full h-screen flex py-3  md:pl-2  relative'>
+        <main className='w-full h-screen flex py-4  md:pl-2  relative'>
             <Filters nav={nav} />
             <section className='grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-4  w-[100%]  mx-auto overflow-y-scroll  gap-y-5 gap-x-3 px-3  border-1 h-[90%]'>
                 {transformProducts().map((prod) => <SingleProduct key={Math.random()} prod={prod} />)}
