@@ -11,7 +11,7 @@ const SingleProduct = ({ prod }) => {
     const { state: { cart }, dispatch } = CartState();
 
     return (
-        <main className=' text-black py-4 card1  shadow-lg border-[1px] border-[#dfdcdc] h-fit mb-5'>
+        <main className=' text-black py-4 card1  shadow-lg border-[1px] border-[#dfdcdc] h-fit mb-3 sm:mb-5'>
 
             <section className='overflow-hidden w-full px-2'>
 
