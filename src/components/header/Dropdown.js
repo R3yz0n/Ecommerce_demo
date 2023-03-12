@@ -25,7 +25,7 @@ const Dropdown = ({ cart }) => {
                 <BsTriangleFill style={{ rotate: '180deg' }} className='text-xs md:text-base' />
             </button>
 
-            <section className={`${toggle ? 'left-[-355%] lg:left-[-350%] min-w-[19rem] max-w-[24rem] py-2  absolute  bg-gray-400 mt-1   h-auto rounded-sm   duration-200  ease-linear z-50 ' : 'overflow-hidden w-0 h-0 '}`}>
+            <section className={`${toggle ? 'left-[-355%] lg:left-[-350%] min-w-[19rem] max-w-[24rem] py-2  absolute  bg-gray-200 mt-1   h-auto rounded-sm   duration-200  ease-linear z-50 ' : 'overflow-hidden w-0 h-0 '}`}>
                 {
                     cart.length === 0 ? <p className='text-black font-semibold px-6 '>Cart is empty</p> :
                         <>
