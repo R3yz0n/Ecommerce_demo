@@ -13,7 +13,7 @@ const Filters = ({ nav }) => {
     return (
         <section className={` absolute top-[1px] left-0 md:block md:static md:w-64 px-4 py-6 bg-gray-700 text-white h-[85vh] z-50 duration-1000 ${nav ? 'ml-0' : 'md:ml-0 ml-[-90%]'}`}>
 
-            <h1 className='text-2xl md:text-2xl font-sans font-semibold pb-3'>Filter Productss</h1>
+            <h1 className='text-2xl md:text-2xl font-sans font-semibold pb-3'>Filter Products</h1>
             <div>
                 <p className='py-2  font-mono flex gap-2'>
                     <input className='cursor-pointer' type="radio" name='group1' onChange={() => { prodDispatch({ type: 'BY_PRICE', payload: 'lowToHigh' }) }}
@@ -36,8 +36,8 @@ const Filters = ({ nav }) => {
                     <span>Fast Delivery only</span>
                 </p>
 
-                <p className='py-2'>
-                    <select className='text-black px-1 rounded py-[2px]' onChange={(e) => prodDispatch({ type: 'BY_CATEGORY', payload: e.target.value })}>
+                <p className='py-2 text-[15px]'>
+                    <select className='text-black px-3 rounded py-[4px]' onChange={(e) => prodDispatch({ type: 'BY_CATEGORY', payload: e.target.value })}>
                         <option disabled selected hidden>Choose category</option>
                         <option>Electronics</option>
                         <option>Clothings</option>
@@ -52,7 +52,7 @@ const Filters = ({ nav }) => {
 
                 </p>
 
-                <button className='text-black bg-white w-[80%] rounded-md mt-3  py-1 font-semibold hover:opacity-80' onClick={() => { prodDispatch({ type: 'CLEAR_FILTERS' }) }}>Clear Filters</button>
+                <button className='text-black bg-white w-[80%] rounded-md mt-3  py-1 font-semibold text-sm hover:opacity-80' onClick={() => { prodDispatch({ type: 'CLEAR_FILTERS' }) }}>Clear Filters</button>
 
 
 
