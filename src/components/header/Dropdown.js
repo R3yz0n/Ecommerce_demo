@@ -17,12 +17,12 @@ const Dropdown = ({ cart }) => {
     const { dispatch } = CartState();
 
     return (
-        <main className='relative'>
+        <main className='relative '>
 
-            <button className='hover:bg-green-800 bg-green-700 flex px-3 py-2 rounded-sm gap-1 items-center' onClick={showCartHandler}>
-                <FaShoppingCart size={18} />
-                <span className='font-semibold'>{cart.length}</span>
-                <BsTriangleFill style={{ rotate: '180deg' }} size={11} />
+            <button className='hover:bg-green-800 bg-green-700 flex sm:px-3 sm:py-2 rounded-sm gap-1 items-center px-1 py-[2px]' onClick={showCartHandler}>
+                <FaShoppingCart className='text-sm' />
+                <span className='font-semibold text-xs'>{cart.length}</span>
+                <BsTriangleFill style={{ rotate: '180deg' }} className='text-[10px]' />
             </button>
 
             <section className={`${toggle ? 'left-[-355%] lg:left-[-350%] min-w-[19rem] max-w-[24rem] py-2  absolute  bg-gray-400 mt-1   h-auto rounded-sm   duration-200  ease-linear z-50 ' : 'overflow-hidden w-0 h-0 '}`}>
