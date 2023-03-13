@@ -39,8 +39,9 @@ const Home = ({ nav }) => {
     return (
         <main className='w-full h-[90vh] flex pt-2  md:pl-2  relative md:static'>
             <Filters nav={nav} />
+            {/* note:using Math.random() results re-rendering of entire array of single product so use id */}
             <section className='grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-4  w-[100%]  mx-auto overflow-y-scroll   gap-x-3 h-full px-3 '>
-                {transformProducts().map((prod) => <SingleProduct key={Math.random()} prod={prod} />)}
+                {transformProducts().map((prod) => <SingleProduct key={prod.id} prod={prod} />)}
             </section>
 
 
