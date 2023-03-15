@@ -18,4 +18,4 @@ const Rating = ({ rating, onClick }) => {
     )
 }
 
-export default Rating
+export default React.memo(Rating)

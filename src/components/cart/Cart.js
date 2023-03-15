@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { state: { cart }, dispatch } = CartState();
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(0);
     console.log('cart');
 
 

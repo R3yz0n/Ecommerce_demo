@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Cart from './components/cart/Cart'
 import Dashboard from './components/dashboard/Dashboard'
@@ -9,7 +9,7 @@ const App = () => {
   console.disableYellowBox = true
   const { pathname } = useLocation()
   const [nav, setNav] = useState(false)
-  const toggleMenu = () => setNav(!nav)
+  const toggleMenu = useCallback(() => setNav(!nav), [nav])
 
 
 

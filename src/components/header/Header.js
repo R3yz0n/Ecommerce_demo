@@ -11,6 +11,7 @@ const Header = ({ toggleMenu, nav }) => {
         prodDispatch({ type: 'SEARCH_QUERY', payload: e.target.value })
 
     }
+    console.log('header');
 
 
     return (

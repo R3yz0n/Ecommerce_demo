@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsTriangleFill } from 'react-icons/bs'
 import { AiFillDelete } from 'react-icons/ai'
@@ -15,6 +15,14 @@ const Dropdown = ({ cart }) => {
     }
 
     const { dispatch } = CartState();
+
+    const clickHandler = useCallback((prod) => {
+        dispatch({ type: 'REMOVE_FROM_CART', payload: prod }, [])
+    }
+
+    )
+
+
 
     return (
         <main className='relative'>
@@ -45,8 +53,8 @@ const Dropdown = ({ cart }) => {
 
                                         </aside>
 
-                                        <aside className=' flex pr-1 cursor-pointer' onClick={() => { dispatch({ type: 'REMOVE_FROM_CART', payload: prod }) }}>
-                                            {<AiFillDelete className='text-base sm:text-xl' style={{ margin: 'auto' }}
+                                        <aside className=' flex pr-1 cursor-pointer' onClick={(prod) => clickHandler(prod)} >
+                                            {< AiFillDelete className='text-base sm:text-xl' style={{ margin: 'auto' }}
                                                 onMouseOver={({ target }) => target.style.color = "red"}
                                                 onMouseOut={({ target }) => target.style.color = "black"}
                                             />}

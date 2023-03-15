@@ -1,12 +1,12 @@
 import { CartState } from '../../store/Context';
 import Rating from './Rating';
+import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const SingleProduct = ({ prod }) => {
-    // console.log(prod);
-    console.log('hi');
+    console.log(prod);
     const { state: { cart }, dispatch } = CartState();
 
     return (
@@ -49,4 +49,5 @@ const SingleProduct = ({ prod }) => {
     )
 }
 
-export default SingleProduct
+// it avoids re-execution due to state change of navbar
+export default React.memo(SingleProduct)
