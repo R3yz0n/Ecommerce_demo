@@ -6,6 +6,7 @@ import SingleProduct from './SingleProduct';
 const Home = ({ nav }) => {
 
     const { state: { products, cart }, prodState: { sort, byStock, byFastDelivery, byRating, searchQuery, category } } = CartState();
+    console.log('s');
 
 
 

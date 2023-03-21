@@ -9,6 +9,8 @@ const Context = ({ children }) => {
     // product state is useless here remove it LATER
 
     const [products, setProducts] = useState([])
+
+
     const [state, dispatch] = useReducer(cartReducer, { products: products, cart: [] })
     // console.log(state.cart);
 
@@ -24,12 +26,12 @@ const Context = ({ children }) => {
 
 
     return (
-        <Cart.Provider value={useMemo(() => ({ state, dispatch, prodState, prodDispatch }), [state, prodState, dispatch, prodDispatch])}>
-            {children}
-        </Cart.Provider>
-        // <Cart.Provider value={{ state, dispatch, prodState, prodDispatch }}>
+        // <Cart.Provider value={useMemo(() => ({ state, dispatch, prodState, prodDispatch }), [state, prodState, dispatch, prodDispatch])}>
         //     {children}
         // </Cart.Provider>
+        <Cart.Provider value={{ state, dispatch, prodState, prodDispatch }}>
+            {children}
+        </Cart.Provider>
 
 
     )

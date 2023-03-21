@@ -51,3 +51,4 @@ const SingleProduct = ({ prod }) => {
 
 // it avoids re-execution due to state change of navbar
 export default React.memo(SingleProduct)
+// export default SingleProduct
