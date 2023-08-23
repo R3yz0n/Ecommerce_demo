@@ -1,1 +1,1 @@
-https://cart-ur.netlify.app/
+Basics frontend CRUD using fake api
